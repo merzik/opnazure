@@ -3,6 +3,9 @@
 fetch https://raw.githubusercontent.com/dmauser/opnazure/master/scripts/$1
 cp $1 /usr/local/etc/config.xml
 
+# Re-bootstrap the updated version of pkg
+env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg bootstrap -f
+
 # 1. Package to get root certificate bundle from the Mozilla Project (FreeBSD)
 # 2. Install bash to support Azure Backup integration
 env ASSUME_ALWAYS_YES=YES pkg install ca_root_nss && pkg install -y bash 
