@@ -11,7 +11,7 @@ env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg bootstrap -f
 env ASSUME_ALWAYS_YES=YES pkg install ca_root_nss && pkg install -y bash 
 
 #Dowload OPNSense Bootstrap and Permit Root Remote Login
-fetch https://raw.githubusercontent.com/opnsense/update/master/bootstrap/opnsense-bootstrap.sh
+fetch https://raw.githubusercontent.com/opnsense/update/21.1.7/bootstrap/opnsense-bootstrap.sh
 sed -i "" 's/#PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 #OPNSense
