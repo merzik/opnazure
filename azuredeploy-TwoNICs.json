@@ -80,9 +80,9 @@
   },
   "variables": {
     "extensionName":"CustomScript",
-    "UntrustedNIC": "[concat(parameters('virtualMachineName'),'-External-NIC')]",
-    "TrustedNIC": "[concat(parameters('virtualMachineName'),'-Internal-NIC')]",
-    "publicIPAddressName": "[concat(parameters('virtualMachineName'),'-PublicIP')]",
+    "UntrustedNIC": "[concat(parameters('virtualMachineName'),'-External-nic')]",
+    "TrustedNIC": "[concat(parameters('virtualMachineName'),'-Internal-nic')]",
+    "publicIPAddressName": "[concat(parameters('virtualMachineName'),'-publicip')]",
     "subnet1Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingUntrustedSubnet'))]",
     "subnet2Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingTrustedSubnet'))]",
     "networkSecurityGroupName": "[concat(parameters('virtualMachineName'),'-nsg')]",
