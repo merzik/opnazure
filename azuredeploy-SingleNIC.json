@@ -52,7 +52,7 @@
     },
     "OpnScriptURI": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/dmauser/opnazure/master/scripts/",
+      "defaultValue": "https://raw.githubusercontent.com/merzik/opnazure/master/scripts/",
             "metadata": {
       "description": "URI for Custom OPN Script and Config"
       }
@@ -74,10 +74,10 @@
   },
   "variables": {
      "extensionName":"CustomScript",
-     "nic": "[concat(parameters('virtualMachineName'),'-NIC')]",
+     "nic": "[concat(parameters('virtualMachineName'),'-nic')]",
      "subnet1Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingSubnetName'))]",
-     "publicIPAddressName": "[concat(parameters('virtualMachineName'),'-PublicIP')]",
-     "networkSecurityGroupName": "[concat(parameters('virtualMachineName'),'-NSG')]",
+     "publicIPAddressName": "[concat(parameters('virtualMachineName'),'-ip')]",
+     "networkSecurityGroupName": "[concat(parameters('virtualMachineName'),'-nsg')]",
      "location": "[resourceGroup().location]"
   },
   "resources": [

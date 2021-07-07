@@ -82,7 +82,7 @@
     "extensionName":"CustomScript",
     "UntrustedNIC": "[concat(parameters('virtualMachineName'),'-External-nic')]",
     "TrustedNIC": "[concat(parameters('virtualMachineName'),'-Internal-nic')]",
-    "publicIPAddressName": "[concat(parameters('virtualMachineName'),'-publicip')]",
+    "publicIPAddressName": "[concat(parameters('virtualMachineName'),'-ip')]",
     "subnet1Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingUntrustedSubnet'))]",
     "subnet2Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingTrustedSubnet'))]",
     "networkSecurityGroupName": "[concat(parameters('virtualMachineName'),'-nsg')]",
@@ -112,7 +112,7 @@
           "imageReference": {
             "publisher": "MicrosoftOSTC",
             "offer": "FreeBSD",
-            "sku": "12.0",
+            "sku": "12.2",
             "version": "latest"
           },
           "osDisk": {
